@@ -51,10 +51,24 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     config['NGROK'],
     config['REACT_WEB'],
+    "http://localhost:3001"
 ]
 CORS_ORIGIN_ALLOW_ALL = False
 
-
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3001',
+# ]
+# CORS_ALLOWED_METHODS = [
+#     'GET',
+#     'POST',
+#     'PUT',
+#     'PATCH',
+#     'DELETE',
+#     'OPTIONS',
+# ]
+# CORS_ALLOWED_HEADERS = [
+#     'Content-Type',
+# ]
 # Application definition
 
 INSTALLED_APPS = [
