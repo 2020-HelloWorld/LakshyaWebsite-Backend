@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
+
 class candidate(models.Model):
     email = models.EmailField(max_length=250,primary_key=True)
     name = models.CharField(max_length=50)
@@ -17,13 +18,18 @@ class mentor(models.Model):
     description = models.CharField(max_length=500)
     pp = models.ImageField(upload_to="static/uploads/pp",null=True)
     
-class company(models.Model):
-    email = models.EmailField(max_length=250,primary_key=True)
-    name = models.CharField(max_length=50)
-    type = models.CharField(max_length=20)
-    description = models.CharField(max_length=500)
-    logo = models.ImageField(upload_to="static/uploads/logo",null=True)
+# class company(models.Model):
+#     id=models.AutoField(primary_key=True)
+#     # email = models.EmailField(max_length=250)
+#     name = models.CharField(max_length=50)
+#     # type = models.CharField(max_length=20)
+#     # description = models.CharField(max_length=500)
+#     # logo = models.ImageField(upload_to="static/uploads/logo",null=True)
 
-class skill(models.Model):
-    name = models.CharField(max_length=20,primary_key=True)
-    
+class company(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50)
+
+class skills(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=20)

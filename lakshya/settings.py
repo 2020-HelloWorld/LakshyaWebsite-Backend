@@ -51,24 +51,25 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     config['NGROK'],
     config['REACT_WEB'],
-    "http://localhost:3001"
+    "http://localhost:3000"
 ]
 CORS_ORIGIN_ALLOW_ALL = False
 
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3001',
-# ]
-# CORS_ALLOWED_METHODS = [
-#     'GET',
-#     'POST',
-#     'PUT',
-#     'PATCH',
-#     'DELETE',
-#     'OPTIONS',
-# ]
-# CORS_ALLOWED_HEADERS = [
-#     'Content-Type',
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
+CORS_ALLOWED_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+CORS_ALLOWED_HEADERS = [
+    'Content-Type',
+    'Access-Control-Allow-Origin'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,9 +79,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
     'corsheaders',
     "django_extensions",
+    
     #User apps
     'internships.apps.InternshipsConfig',
     'material.apps.MaterialConfig',
@@ -225,5 +226,3 @@ SESSION_COOKIE_DOMAIN = ""
 # CSRF_COOKIE_HTTPONLY = False
 # CSRF_COOKIE_SAMESITE = None
 # CSRF_COOKIE_DOMAIN = None
-
-
